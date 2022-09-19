@@ -1,4 +1,3 @@
-
 String getGreeting(){
 
   DateTime date = DateTime.now();

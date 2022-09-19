@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 
-class DrawerListItem extends StatelessWidget {
+class DrawerListItem extends StatefulWidget {
 
   final String text;
   final Icon icon;
-  const DrawerListItem({super.key, required this.text, required this.icon});
+  final void Function() onTap;
+  const DrawerListItem({super.key, required this.text, required this.icon, required this.onTap});
 
+  @override
+  State<DrawerListItem> createState() => _DrawerListItemState();
+}
+
+class _DrawerListItemState extends State<DrawerListItem> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
+      onTap: widget.onTap,
       dense: true,
-      leading: icon,
+      leading: widget.icon,
       title: Text(
-        text,
+        widget.text,
         style: const TextStyle(
           fontFamily: "Merriweather",
           fontSize: 15,
