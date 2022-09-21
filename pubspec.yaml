@@ -35,9 +35,6 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Regular.ttf
-    - family: Agne
-      fonts:
-        - asset: fonts/Agne.ttf
     - family: Merriweather
       fonts:
         - asset: fonts/Merriweather-Regular.ttf
