@@ -21,7 +21,7 @@ class _ListItemState extends State<ListItem> with TickerProviderStateMixin {
     return AnimatedOpacity(
       alwaysIncludeSemantics: true,
       opacity: widget.task.getIsDone ? 0.3 : 1,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 800),
       child: Dismissible(
         key: UniqueKey(),
         confirmDismiss: (direction) => Future.value(direction == DismissDirection.endToStart),
@@ -43,6 +43,9 @@ class _ListItemState extends State<ListItem> with TickerProviderStateMixin {
           ),
         ),
         child: CheckboxListTile(
+          checkboxShape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(5))
+          ),
           value: widget.task.getIsDone,
           onChanged: (value) => context.read<TaskModel>().toggleDone(widget.task),
           title: Text(

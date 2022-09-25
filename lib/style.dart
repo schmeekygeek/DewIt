@@ -48,8 +48,8 @@ class ThemeSelector {
           fontSize: 18,
           fontFamily: "Poppins",
         ),
-        shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         elevation: 12,
         backgroundColor: Colors.white,
@@ -63,7 +63,9 @@ class ThemeSelector {
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          shape: const MaterialStatePropertyAll(ContinuousRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(90)))),
+          shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+          )),
           backgroundColor: MaterialStatePropertyAll(Colors.blue[100]),
           foregroundColor: const MaterialStatePropertyAll(Colors.black87),
           textStyle: const MaterialStatePropertyAll(TextStyle(
@@ -125,8 +127,8 @@ class ThemeSelector {
           fontSize: 18,
           fontFamily: "Poppins",
         ),
-        shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         elevation: 12,
         backgroundColor: Color.fromARGB(255, 25, 23, 36),
@@ -135,12 +137,14 @@ class ThemeSelector {
         fillColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 246, 193, 119)),
         checkColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 82, 79, 103)),
         shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          shape: const MaterialStatePropertyAll(ContinuousRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(90)))),
+          shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+          )),
           backgroundColor: MaterialStatePropertyAll(Colors.blue[500]),
           foregroundColor: const MaterialStatePropertyAll(Colors.white),
           textStyle: const MaterialStatePropertyAll(TextStyle(

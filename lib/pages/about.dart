@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/providers/theme_model.dart';
+import 'package:todo/widgets/about_links_item.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class About extends StatefulWidget {
@@ -109,59 +110,33 @@ class _AboutState extends State<About> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      TextButton.icon(
-                        icon: const Icon(FontAwesomeIcons.github),
-                        label: const Text("GitHub"),
-                        style: ButtonStyle(
-                          foregroundColor: context.watch<ThemeModel>().isDark ? const MaterialStatePropertyAll(Colors.black87) : const MaterialStatePropertyAll(Colors.white),
-                          backgroundColor: !context.watch<ThemeModel>().isDark ? const MaterialStatePropertyAll(Colors.black87) : const MaterialStatePropertyAll(Colors.white),
-                          fixedSize: const MaterialStatePropertyAll(Size.fromWidth(220)),
-                        ),
-                        onPressed: () async {
-                          const githubUrl = "https://github.com/schmeekygeek";
-                          if(await canLaunchUrlString(githubUrl)){
-                            await launchUrlString(
-                              githubUrl,
-                              mode: LaunchMode.externalApplication
-                            );
-                          }
-                        },
+                      const LinkItem(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.indigoAccent,
+                        url: "https://discord.com/users/687543682269708298",
+                        name: " Discord",
+                        icon: FontAwesomeIcons.discord,
                       ),
-                      // TextButton.icon(
-                      //   icon: const Icon(FontAwesomeIcons.twitter),
-                      //   label: const Text("Twitter"),
-                      //   style: ButtonStyle(
-                      //     foregroundColor: context.watch<ThemeModel>().isDark ? const MaterialStatePropertyAll(Colors.black87) : const MaterialStatePropertyAll(Colors.white),
-                      //     fixedSize: const MaterialStatePropertyAll(Size.fromWidth(220)),
-                      //   ),
-                      //   onPressed: () async {
-                      //     const twitterUrl = "https://twitter.com/schmeekydev";
-                      //     if(await canLaunchUrlString(twitterUrl)){
-                      //       await launchUrlString(
-                      //         twitterUrl,
-                      //         mode: LaunchMode.externalApplication
-                      //       );
-                      //     }
-                      //   },
-                      // ),
-                      TextButton.icon(
-                        icon: const Icon(FontAwesomeIcons.linkedin, textDirection: TextDirection.ltr),
-                        label: const Text("LinkedIn"),
-                        style: ButtonStyle(
-                          // foregroundColor: MaterialStatePropertyAll(Colors.black87),
-                          foregroundColor: context.watch<ThemeModel>().isDark ? const MaterialStatePropertyAll(Colors.blue) : const MaterialStatePropertyAll(Colors.white),
-                          backgroundColor: !context.watch<ThemeModel>().isDark ? const MaterialStatePropertyAll(Colors.blue) : const MaterialStatePropertyAll(Colors.white),
-                          fixedSize: const MaterialStatePropertyAll(Size.fromWidth(220)),
-                        ),
-                        onPressed: () async {
-                          const linkedinUrl = "https://www.linkedin.com/in/abdul-samad-shaikh-57b8b2220/";
-                          if(await canLaunchUrlString(linkedinUrl)){
-                            await launchUrlString(
-                              linkedinUrl,
-                              mode: LaunchMode.externalApplication
-                            );
-                          }
-                        },
+                      LinkItem(
+                          foregroundColor: context.watch<ThemeModel>().isDark ? Colors.black87 : Colors.white,
+                          backgroundColor: !context.watch<ThemeModel>().isDark ? Colors.black87 : Colors.white,
+                          url: "https://github.com/schmeekygeek",
+                          name: "GitHub",
+                          icon: FontAwesomeIcons.github,
+                      ),
+                      const LinkItem(
+                        foregroundColor: Colors.black,
+                        backgroundColor: Colors.lightBlueAccent,
+                        url: "https://twitter.com/schmeekydev",
+                        name: "Twitter",
+                        icon: FontAwesomeIcons.twitter,
+                      ),
+                      const LinkItem(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.blueAccent,
+                        url: "https://www.linkedin.com/in/abdul-samad-shaikh-57b8b2220/",
+                        name: "LinkedIn",
+                        icon: FontAwesomeIcons.linkedin,
                       ),
                       const SizedBox(
                         height: 30
