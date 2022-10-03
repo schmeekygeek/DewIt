@@ -7,34 +7,15 @@ import 'package:todo/providers/theme_model.dart';
 
 class ListItem extends StatefulWidget {
 
-
+  final void Function() snackbar;
   final Task task;
-  const ListItem({ super.key,  required this.task });
+  const ListItem({ super.key,  required this.task, required this.snackbar });
 
   @override
   State<ListItem> createState() => _ListItemState();
 }
 
-class _ListItemState extends State<ListItem> with TickerProviderStateMixin {
-
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      value: 2,
-      vsync: this,
-      duration: const Duration(seconds: 1),
-      reverseDuration: const Duration(milliseconds: 200),
-    );
-    _controller.reverse();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
+class _ListItemState extends State<ListItem> {
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +27,7 @@ class _ListItemState extends State<ListItem> with TickerProviderStateMixin {
         key: UniqueKey(),
         confirmDismiss: (direction) => Future.value(direction == DismissDirection.endToStart),
         onDismissed: (direction) {
+          widget.snackbar();
           context.read<TaskModel>().removeTask(widget.task);
         },
         direction: DismissDirection.endToStart,

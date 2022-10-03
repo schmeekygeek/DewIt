@@ -12,8 +12,14 @@ class TaskModel with ChangeNotifier {
 
   List<Task> tasks = [];
 
-  void addTask(String text) async {
+  void addTask(String text, int index) async {
     tasks.insert(0, Task(text: text, isDone: false));
+    saveData();
+    notifyListeners();
+  }
+
+  void addTaskObject(Task task, int index) async {
+    tasks.insert(index, task);
     saveData();
     notifyListeners();
   }

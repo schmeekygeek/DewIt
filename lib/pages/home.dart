@@ -13,6 +13,8 @@ import 'package:todo/providers/task_model.dart';
 import 'package:todo/providers/theme_model.dart';
 import 'package:todo/style.dart';
 
+import '../services/snackbar_service.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -114,6 +116,7 @@ class _HomeState extends State<Home> {
                           const Center(child: Icon(FontAwesomeIcons.gripLines)),
                           for(Task task in task.tasks) 
                           ListItem(
+                            snackbar: () => showSnackBar(context, task.text!, task.isDone, context.read<TaskModel>().tasks.indexOf(task)),
                             task: task,
                           ),
                         ],

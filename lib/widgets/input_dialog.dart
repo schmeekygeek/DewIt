@@ -30,7 +30,7 @@ Future<void> dialogBuilder(BuildContext context) {
           TextButton(
             onPressed: () {
               if(context.read<TaskModel>().getInput().isNotEmpty) {
-                context.read<TaskModel>().addTask(context.read<TaskModel>().getInput());
+                context.read<TaskModel>().addTask(context.read<TaskModel>().getInput(), 0);
                 context.read<TaskModel>().setInput('');
               }
                 Navigator.pop(context);

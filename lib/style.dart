@@ -57,9 +57,6 @@ class ThemeSelector {
       checkboxTheme: const CheckboxThemeData(
         fillColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 235, 111, 146)),
         checkColor: MaterialStatePropertyAll<Color>(Colors.white),
-        // shape: ContinuousRectangleBorder(
-        //   borderRadius: BorderRadius.all(Radius.circular(10)),
-        // ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
@@ -76,6 +73,23 @@ class ThemeSelector {
           )),
         )
       ),
+      snackBarTheme: const SnackBarThemeData(
+        contentTextStyle: TextStyle(
+          color: Colors.black87,
+          fontFamily: "Poppins",
+          fontSize: 12,
+          fontWeight: FontWeight.w300,
+        ),
+        actionTextColor: Colors.blueAccent,
+        behavior: SnackBarBehavior.fixed,
+        elevation: 10,
+        backgroundColor: Color.fromARGB(255, 246, 193, 119),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10)
+          )
+        ),
+      )
     );
   }
 
@@ -136,9 +150,6 @@ class ThemeSelector {
       checkboxTheme: const CheckboxThemeData(
         fillColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 246, 193, 119)),
         checkColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 82, 79, 103)),
-        // shape: ContinuousRectangleBorder(
-        //   borderRadius: BorderRadius.all(Radius.circular(20)),
-        // ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
@@ -155,6 +166,23 @@ class ThemeSelector {
           )),
         )
       ),
+      snackBarTheme: const SnackBarThemeData(
+        contentTextStyle: TextStyle(
+          color: Colors.black87,
+          fontFamily: "Poppins",
+          fontSize: 12,
+          fontWeight: FontWeight.w300,
+        ),
+        actionTextColor: Colors.blueAccent,
+        behavior: SnackBarBehavior.fixed,
+        elevation: 10,
+        backgroundColor: Color.fromARGB(255, 246, 193, 119),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10)
+          )
+        ),
+      )
     );
   }
 }
