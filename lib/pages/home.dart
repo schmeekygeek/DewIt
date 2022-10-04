@@ -86,10 +86,11 @@ class _HomeState extends State<Home> {
                   fixedSize: MaterialStatePropertyAll(Size.fromWidth(100)),
                 ),
                 onPressed: () {
-                  context.read<TaskModel>().sortTasks() ? showSuccessfullySortedSnackbar(context) : showNoTasksToSortSnackbar(context);
+                  context.read<TaskModel>().sortTasks() ?
+                    showSuccessfullySortedSnackbar(context)
+                  : showNoTasksToSortSnackbar(context);
                 },
-              )
-
+              ),
             ],
             expandedHeight: 200,
             stretch: true,
@@ -105,7 +106,7 @@ class _HomeState extends State<Home> {
             centerTitle: true,
           ),
           SliverToBoxAdapter(
-            child: 
+            child:
             context.watch<TaskModel>().tasks.isEmpty ?
             const Text("You haven't added any tasks yet.", textAlign: TextAlign.center,) :
             AnimatedOpacity(
@@ -114,28 +115,45 @@ class _HomeState extends State<Home> {
               duration: const Duration(seconds: 1),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  padding: const EdgeInsets.all(11),
-                  decoration: BoxDecoration(
-                    color: context.watch<ThemeModel>().isDark ? 
-                    const Color.fromARGB(255, 38, 35, 58) :
-                    const Color.fromARGB(255, 235, 188, 186),
-                    borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  ),
-                  child: Consumer<TaskModel>(
-                    builder: (context, task, child){
-                      return Column(
-                        children: [
-                          const Center(child: Icon(FontAwesomeIcons.gripLines)),
-                          for(Task task in task.tasks) 
-                          ListItem(
-                            snackbar: () => showSnackBar(context, task.text!, task.isDone, context.read<TaskModel>().tasks.indexOf(task)),
-                            task: task,
-                          ),
-                        ],
-                      );
-                    }
-                  ),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Icon(
+                          FontAwesomeIcons.leftLong,
+                          size: 14,
+                        ),
+                        Text(" Swipe left on a task to remove it  ")
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(11),
+                      decoration: BoxDecoration(
+                        color: context.watch<ThemeModel>().isDark ?
+                          const Color.fromARGB(255, 38, 35, 58) :
+                          const Color.fromARGB(255, 235, 188, 186),
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
+                      ),
+                      child: Consumer<TaskModel>(
+                        builder: (context, task, child){
+                          return Column(
+                            children: [
+                              const Center(child: Icon(FontAwesomeIcons.gripLines)),
+                              for(Task task in task.tasks) 
+                              ListItem(
+                                snackbar: () => showSnackBar(context, task.text!, task.isDone, context.read<TaskModel>().tasks.indexOf(task)),
+                                task: task,
+                              ),
+                            ],
+                          );
+                        }
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
