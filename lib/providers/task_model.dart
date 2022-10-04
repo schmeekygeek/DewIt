@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo/classes/task.dart';
 import 'package:todo/services/shared_prefs_service.dart';
+
+import '../classes/task.dart';
 
 class TaskModel with ChangeNotifier {
 
@@ -16,6 +16,21 @@ class TaskModel with ChangeNotifier {
     tasks.insert(0, Task(text: text, isDone: false));
     saveData();
     notifyListeners();
+  }
+
+  bool sortTasks() {
+    if(tasks.isNotEmpty){
+      for(Task task in tasks) {
+        if(task.isDone){
+          tasks.remove(task);
+          tasks.add(task);
+        }
+      }
+      notifyListeners();
+      saveData();
+      return true;
+    }
+    return false;
   }
 
   void addTaskObject(Task task, int index) async {

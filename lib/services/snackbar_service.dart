@@ -18,3 +18,19 @@ void showSnackBar(BuildContext context, String text, bool isDone, int index){
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
+
+void showSuccessfullySortedSnackbar(BuildContext context){
+  SnackBar snackBar = const SnackBar(
+    duration: Duration(seconds: 2),
+    content: Text("Successfully sorted tasks!"),
+  );
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}
+
+void showNoTasksToSortSnackbar(BuildContext context){
+  SnackBar snackBar = const SnackBar(
+    duration: Duration(seconds: 2),
+    content: Text("There are no tasks to sort."),
+  );
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}

@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -78,6 +77,20 @@ class _HomeState extends State<Home> {
       body: CustomScrollView(
         slivers: <Widget> [
           SliverAppBar.large(
+            actions: [
+              TextButton.icon(
+                icon: const Icon(Icons.sort_rounded, textDirection: TextDirection.ltr),
+                label: const Text("Sort"),
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  fixedSize: MaterialStatePropertyAll(Size.fromWidth(100)),
+                ),
+                onPressed: () {
+                  context.read<TaskModel>().sortTasks() ? showSuccessfullySortedSnackbar(context) : showNoTasksToSortSnackbar(context);
+                },
+              )
+
+            ],
             expandedHeight: 200,
             stretch: true,
             title: const Text(

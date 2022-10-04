@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/providers/task_model.dart';
 import 'package:todo/providers/theme_model.dart';
@@ -8,7 +9,7 @@ Future<void> dialogBuilder(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        icon: const Icon(Icons.notes),
+        icon: const Icon(FontAwesomeIcons.barsProgress),
         title: const Text("New Task"),
         content: TextField(
           style: TextStyle(
@@ -18,9 +19,8 @@ Future<void> dialogBuilder(BuildContext context) {
             hintText: "e.g. Buy groceries",
           ),
           autofocus: true,
-          onChanged:(value) {
-              context.read<TaskModel>().setInput(value);
-          },
+          onChanged:(value) => context.read<TaskModel>().setInput(value),
+          onSubmitted: (value) => context.read<TaskModel>().setInput(value),
         ),
         actions: [
           TextButton(

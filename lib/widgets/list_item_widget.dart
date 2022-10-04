@@ -24,7 +24,7 @@ class _ListItemState extends State<ListItem> {
       opacity: widget.task.getIsDone ? 0.3 : 1,
       duration: const Duration(milliseconds: 800),
       child: Dismissible(
-        key: UniqueKey(),
+        key: ValueKey(widget.task.text),
         confirmDismiss: (direction) => Future.value(direction == DismissDirection.endToStart),
         onDismissed: (direction) {
           widget.snackbar();
@@ -46,6 +46,7 @@ class _ListItemState extends State<ListItem> {
         ),
         // https://assets8.lottiefiles.com/temp/lf20_eDCMYv.json
         child: CheckboxListTile(
+          tristate: true,
           checkboxShape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(5))
           ),
