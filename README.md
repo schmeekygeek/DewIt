@@ -1,16 +1,14 @@
-# todo
+# DewIT
 
-A new Flutter project.
+DewIT is a no-nonsense, free and open-source todo/task list application to manage your tasks well, built using the Flutter framework.
 
-## Getting Started
+## Home page
+<p>
+<img src="https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/8c397b8993dab1e45340ff4150106532?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCICg4zcHaeTq6lnXCzYMELrNHsrdbkhZL5SCFzYaGxxQ5AiEAl9apSJiMBKa5Xr7D4%2BXFRlh6yDMfUTR06tZwKz7OOzYqzQQIVxAAGgw3Mzk5MzkxNzM4MTkiDNVU%2B8z9h6oV%2FofhfiqqBHV8rP6ubyH329EPeVOEoEuo%2FSqHFU9N3xwVmMR3asrgoTQZMoVeS5vkCeuGAcagYxV7fC0z8pyFi%2BmYK9zgub6HWXcJsRo80ddHNCmJ129eBtMgxuWyoMRNb7ixAfoM0zdlHu9RJbQwBlXdOYrBrG6jxbZc9qL5R1x02nt0Rej3vYTNhXjEPZ3jvWoqIbywAqjDgUSrSMHY5KjBsKqmh3wvNhLSv2vMlQ4TTlMeURxOA%2B8Vh21RRWMaWTwwBGBfx2cDemIy8gdzz2rSPvP0tRajFldrD%2F0atFBvtZOF1nQhDfxWOY5N8NngB3MHrX9qvtvWjxMxwV4lsvOrOhBXgtfj6i%2BB8UjnU1Zyv9xDmdNotoxHbSjPe%2Bj2yv6FglAa9LKymmXuZeS9wURxYLXWXhmv1IpkCMXDPOFS6o%2BY%2FR7YKrRsnyC2J53x6nrz2xHgr90N%2BpcB0CAg4YNE0kvOXi9c8SmLnYXwJEU21I5hILXKdn%2FWroca%2BxLBUjCAxL%2Bji2LBh2TymTfrQas%2BdCHMI9Jg9swXPIdtOWsT59h6lX%2BMLKgHgOGn523u%2FhyBvcqLInQ%2FgriEjL2Nkh8wTf6qz8jXmQvSiIkWrZflUUz2pSV%2Fe%2B9Z0K4gSaqj2OOOz5xAaiGwEedmKV0CDibOM1RwglWrWHZjlFaN%2BK4z7vARP08PD9lxLD6BJ3JIhuggmquzJP9hxsbh%2B9sUxN%2B5ocblNn4eaG7CqRsIzm4xMKfjjpoGOqcBLW7mXzDvmEJN5qxf8%2FTqXXA8i7cmjrWq%2BOEY4BGDyJlTLOHK%2B25RrpyeS%2FkogGeGhUtrsYN1wxissACqMkyMlPaEL7%2BekWDryJ%2FpBV%2F%2B3OdUHsQ9f3t%2BQBPF0viXy4q9kxO1jxkjwPDr0FDcSPLKe5Kx4%2FcEE3R%2BHvh0%2FMqyr57ylnOISadfL3h2s6Gx%2FDemwGUqECbf8F2%2F7sDYZVoDUxh062WQHGg%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221010T080710Z&X-Amz-SignedHeaders=host&X-Amz-Expires=899&X-Amz-Credential=ASIA2YR6PYW5ZLJNSX6E%2F20221010%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=77291f00a0478728653f7f37826ee519768293027e7c750703fde515e0d790e4" />
 
-This project is a starting point for a Flutter application.
+## About page
+<img src="https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/8ae63cd7c58d50adb7554f8001c25d29?response-content-disposition=inline%3B%20filename%3D%22image_original%22%3B%20filename%2A%3Dutf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEI7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCQXvg7mLzhN0ZXuxis51DiPGJb8DX9OKGas1GanVQ2MQIgOOHP2t8JcbBNOp9yDnVEXLNtIghUtK2hIbT%2F6kIQ3%2FoqzQQIVxAAGgw3Mzk5MzkxNzM4MTkiDGam1MJeMkBFzWoHnyqqBAl6ENLBNW9fdZPZmTsy32dKchqB%2BKIqhq9dVbmXXfkbdhR8ELdIjYqMJr7LlDo0KmNk67C%2BxMTZDeYis3%2FM1QxZ3tVSSWnRPJiMDHg7XaLAC%2BtGrTJ46FoJyEFo0iPWoeWz%2BMS3f0fHFNb3tT%2FhnmDsemiEccnf6OEaGw3tzKkkfgDmNZkckrdlp8vbS3bcunGxbvpYXrK3ZVdXUYx8HZsKZrG37UI7%2BRVjXBT02l64O%2B0l4Eaza7T2GgTi5uVQbDNFa8Nrl34TErwD7pZBuhe2zdtsm34kkOlk1DU6wRe1UYW2ZLLB%2BKXXgiFqDGC5RXTymJzmoTaWNCsVs%2Bd3klkmZ9RnzU2%2BxPUJ66UlAzXcXwlWJhxYq3d%2BW7GSiFpyoN7%2Fgk0wwJHpwd57NDA1NvKScO%2FIYvEbs6m1nAyyTwk%2FZJGXIcSB10lPH1q5j%2Fq8I8NNdMrgcmLMIZmOYWPFCYCwovlLZzn0NjCZwleNlbqlJK9jcF9snwHw%2FfTDSoWMbAvxtDuumQbHe7Peilp%2BtK39fiLfxz1CbDcqBamXlmXIfM038ANfelCKQYwszA0GhW2W%2BD70jCV5Mc8f7Wxv1wJG7f7N3i0YyNgcn2ITEjdwg6qr%2Fd6hIYvtEW3yeFwgP%2BZ55uhzHDqNhGA%2BK%2BR2%2BhONewUcicC%2BYOQCK0%2FIfxySQ%2FLdo4fTUrDSQbANg3P5UQQRKigi7itGNoS%2BXR5zoF1d8oMf%2FwRyGJZpMLfgjpoGOqcBpXIR%2FkrvWm35%2BpqsDfDHpBvEKWSn0ymSEBqeef35EJ%2FhxxeacijUrwlzdWa1%2FfrR6nzzN1EZgDBvWG9ekOpNY37KqjpcciMrJJBGmoTcqLsz27rcFgUSpP1ZfBeUwZ9TE2rr4JaX%2BqFkppXLcJvD9SUB12%2FvD%2BOTgiIRqKM%2FB%2BdXZUahnilFxKmFV6Xo2oFUeBI79ornsQSFBtuglDwnMqc1lVEHHNE%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221010T080903Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=ASIA2YR6PYW5U7VXEO4A%2F20221010%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=9e56072fa491f49a655bf060c0426b40dbe5824d826163316e01241ed72205f5" />
+</p>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Installing
+Download and install the apk from the [releases](https://github.com/schmeekygeek/flutter-todo/releases) page.

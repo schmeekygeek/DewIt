@@ -43,7 +43,7 @@ class _AboutState extends State<About> {
               padding: const EdgeInsets.all(12),
               child: Column(
                 children: [
-                  const Text("DewIT is free and open-source application to manage your tasks well, built using the Flutter framework, by,",
+                  const Text("DewIT is a free and open-source application to manage your tasks well, built using the Flutter framework, by,",
                     textAlign: TextAlign.center,
                     ),
                   const SizedBox(
@@ -82,10 +82,8 @@ class _AboutState extends State<About> {
                             pause: const Duration(milliseconds: 800),
                             repeatForever: true,
                             animatedTexts: [
-                              RotateAnimatedText("ARTIST"),
                               RotateAnimatedText("DESIGNER"),
                               RotateAnimatedText("DEVELOPER"),
-                              RotateAnimatedText("WRITER"),
                             ],
                           ),
                       ),]
