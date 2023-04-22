@@ -29,6 +29,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     SharedPreferencesService.init();
     context.read<TaskModel>().initPrefs();
+    context.read<ThemeModel>().initPrefs();
   }
 
   @override
