@@ -123,7 +123,7 @@ class _AboutState extends State<About> {
                       foregroundColor: Colors.black,
                       backgroundColor: Colors.limeAccent,
                       url: "https://schmeeky.pages.dev",
-                      name: "Read my Blog",
+                      name: "Blog",
                       icon: FontAwesomeIcons.book,
                     ),
                     const LinkItem(

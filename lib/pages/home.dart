@@ -6,7 +6,7 @@ import 'about.dart';
 import '../classes/task.dart';
 import '../services/util.dart';
 import '../widgets/drawer_list_item.dart';
-import '../widgets/input_dialog.dart';
+import '../widgets/input_sheet.dart';
 import '../widgets/list_item_widget.dart';
 import '../providers/task_model.dart';
 import '../providers/theme_model.dart';
@@ -194,13 +194,16 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(
+      floatingActionButton: FloatingActionButton.extended(
+        label: const Text("New Task"),
+        isExtended: true,
+        tooltip: "New Task",
+        icon: const Icon(
           FontAwesomeIcons.plus,
           size: 24,
         ),
         onPressed: () async {
-          dialogBuilder(context);
+          bottomSheetBuilder(context);
         },
       ),
     );
