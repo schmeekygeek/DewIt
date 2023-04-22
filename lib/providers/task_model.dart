@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:todo/services/shared_prefs_service.dart';
+import '../services/shared_prefs_service.dart';
 
 import '../classes/task.dart';
 

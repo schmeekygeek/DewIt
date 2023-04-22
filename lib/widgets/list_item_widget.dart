@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/classes/task.dart';
-import 'package:todo/providers/task_model.dart';
-import 'package:todo/providers/theme_model.dart';
+
+import '../classes/task.dart';
+import '../providers/task_model.dart';
+import '../providers/theme_model.dart';
 
 class ListItem extends StatefulWidget {
-
   final void Function() snackbar;
   final Task task;
-  const ListItem({ super.key,  required this.task, required this.snackbar });
+  const ListItem({super.key, required this.task, required this.snackbar});
 
   @override
   State<ListItem> createState() => _ListItemState();
 }
 
 class _ListItemState extends State<ListItem> {
-
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
@@ -25,7 +24,9 @@ class _ListItemState extends State<ListItem> {
       duration: const Duration(milliseconds: 800),
       child: Dismissible(
         key: ValueKey(widget.task.text),
-        confirmDismiss: (direction) => Future.value(direction == DismissDirection.endToStart),
+        confirmDismiss: (direction) => Future.value(
+          direction == DismissDirection.endToStart,
+        ),
         onDismissed: (direction) {
           widget.snackbar();
           context.read<TaskModel>().removeTask(widget.task);
@@ -48,18 +49,25 @@ class _ListItemState extends State<ListItem> {
         child: CheckboxListTile(
           tristate: true,
           checkboxShape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(5))
+            borderRadius: BorderRadius.all(
+              Radius.circular(5),
+            ),
           ),
           value: widget.task.getIsDone,
-          onChanged: (value) => context.read<TaskModel>().toggleDone(widget.task),
+          onChanged: (value) =>
+              context.read<TaskModel>().toggleDone(widget.task),
           title: Text(
             widget.task.getText!,
             style: TextStyle(
-              decoration: (widget.task.getIsDone) ? TextDecoration.lineThrough : TextDecoration.none,
-              color: context.watch<ThemeModel>().isDark ? Colors.white : Colors.black87,
+              decoration: (widget.task.getIsDone)
+                  ? TextDecoration.lineThrough
+                  : TextDecoration.none,
+              color: context.watch<ThemeModel>().isDark
+                  ? Colors.white
+                  : Colors.black87,
               fontFamily: "Poppins",
               fontSize: 15,
-              fontWeight: FontWeight.w100
+              fontWeight: FontWeight.w100,
             ),
           ),
         ),
