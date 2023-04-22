@@ -8,7 +8,14 @@ class LinkItem extends StatelessWidget {
   final Color backgroundColor;
   final Color foregroundColor;
 
-  const LinkItem({super.key, required this.name, required this.icon, required this.url, required this.backgroundColor, required this.foregroundColor});
+  const LinkItem({
+    super.key,
+    required this.name,
+    required this.icon,
+    required this.url,
+    required this.backgroundColor,
+    required this.foregroundColor
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +25,13 @@ class LinkItem extends StatelessWidget {
       style: ButtonStyle(
         backgroundColor: MaterialStatePropertyAll(backgroundColor),
         foregroundColor: MaterialStatePropertyAll(foregroundColor),
-        fixedSize: const MaterialStatePropertyAll(Size.fromWidth(220)),
+        fixedSize: const MaterialStatePropertyAll(
+          Size.fromWidth(220),
+        ),
       ),
       onPressed: () async {
-        if(await canLaunchUrlString(url)){
-          await launchUrlString(
-            url,
-            mode: LaunchMode.externalApplication
-          );
+        if (await canLaunchUrlString(url)) {
+          await launchUrlString(url, mode: LaunchMode.platformDefault);
         }
       },
     );
