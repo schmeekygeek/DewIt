@@ -150,29 +150,26 @@ class _HomeState extends State<Home> {
                                 Radius.circular(20),
                               ),
                             ),
-                            child: Consumer<TaskModel>(
-                              builder: (context, task, child) {
-                                return Column(
-                                  children: [
-                                    const Center(
-                                      child: Icon(FontAwesomeIcons.gripLines),
+                            child: Column(
+                              children: [
+                                const Center(
+                                  child: Icon(FontAwesomeIcons.gripLines),
+                                ),
+                                for (Task task
+                                    in context.watch<TaskModel>().tasks)
+                                  ListItem(
+                                    snackbar: () => showSnackBar(
+                                      context,
+                                      task.text!,
+                                      task.isDone,
+                                      context
+                                          .read<TaskModel>()
+                                          .tasks
+                                          .indexOf(task),
                                     ),
-                                    for (Task task in task.tasks)
-                                      ListItem(
-                                        snackbar: () => showSnackBar(
-                                          context,
-                                          task.text!,
-                                          task.isDone,
-                                          context
-                                              .read<TaskModel>()
-                                              .tasks
-                                              .indexOf(task),
-                                        ),
-                                        task: task,
-                                      ),
-                                  ],
-                                );
-                              },
+                                    task: task,
+                                  ),
+                              ],
                             ),
                           ),
                         ],
