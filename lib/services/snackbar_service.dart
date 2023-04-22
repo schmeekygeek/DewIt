@@ -14,6 +14,8 @@ void showSnackBar(BuildContext context, String text, bool isDone, int index){
       onPressed: () {
         context.read<TaskModel>().addTaskObject(task, index);
       },
+      textColor: Colors.black,
+      disabledTextColor: Colors.black87,
     ),
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);

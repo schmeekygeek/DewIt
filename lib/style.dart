@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ThemeSelector {
-
   const ThemeSelector();
 
   ThemeData buildLightTheme() {
@@ -17,9 +16,7 @@ class ThemeSelector {
         ),
       ),
       appBarTheme: const AppBarTheme(
-        iconTheme: IconThemeData(
-          color: Colors.black87
-        ),
+        iconTheme: IconThemeData(color: Colors.black87),
         titleTextStyle: TextStyle(
           color: Color.fromARGB(255, 144, 122, 169),
           fontFamily: "Agne",
@@ -35,8 +32,8 @@ class ThemeSelector {
         dense: true,
         shape: ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(20)
-          )
+            Radius.circular(20),
+          ),
         ),
       ),
       dialogTheme: const DialogTheme(
@@ -49,29 +46,41 @@ class ThemeSelector {
           fontFamily: "Poppins",
         ),
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
         ),
         elevation: 12,
         backgroundColor: Colors.white,
       ),
       checkboxTheme: const CheckboxThemeData(
-        fillColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 235, 111, 146)),
-        checkColor: MaterialStatePropertyAll<Color>(Colors.white),
+        fillColor: MaterialStatePropertyAll<Color>(
+          Color.fromARGB(255, 235, 111, 146),
+        ),
+        checkColor: MaterialStatePropertyAll<Color>(
+          Colors.white,
+        ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-          )),
+          shape: const MaterialStatePropertyAll(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
+          ),
           backgroundColor: MaterialStatePropertyAll(Colors.blue[100]),
           foregroundColor: const MaterialStatePropertyAll(Colors.black87),
-          textStyle: const MaterialStatePropertyAll(TextStyle(
-            color: Colors.black87,
-            fontFamily: "Poppins",
-            fontSize: 12,
-            fontWeight: FontWeight.w200,
-          )),
-        )
+          textStyle: const MaterialStatePropertyAll(
+            TextStyle(
+              color: Colors.black87,
+              fontFamily: "Poppins",
+              fontSize: 12,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
+        ),
       ),
       snackBarTheme: const SnackBarThemeData(
         contentTextStyle: TextStyle(
@@ -80,16 +89,16 @@ class ThemeSelector {
           fontSize: 12,
           fontWeight: FontWeight.w300,
         ),
-        actionTextColor: Colors.blueAccent,
+        actionTextColor: Colors.black,
         behavior: SnackBarBehavior.fixed,
         elevation: 10,
         backgroundColor: Color.fromARGB(255, 246, 193, 119),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(10)
-          )
+            Radius.circular(10),
+          ),
         ),
-      )
+      ),
     );
   }
 
@@ -103,7 +112,7 @@ class ThemeSelector {
           letterSpacing: 1,
           fontSize: 12,
           color: Colors.white,
-          // fontWeight: 
+          // fontWeight:
         ),
       ),
       appBarTheme: const AppBarTheme(
@@ -128,8 +137,8 @@ class ThemeSelector {
         dense: true,
         shape: ContinuousRectangleBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(10)
-          )
+            Radius.circular(10),
+          ),
         ),
       ),
       dialogTheme: const DialogTheme(
@@ -142,29 +151,41 @@ class ThemeSelector {
           fontFamily: "Poppins",
         ),
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(20),
+          ),
         ),
         elevation: 12,
         backgroundColor: Color.fromARGB(255, 25, 23, 36),
       ),
       checkboxTheme: const CheckboxThemeData(
-        fillColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 246, 193, 119)),
-        checkColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 82, 79, 103)),
+        fillColor: MaterialStatePropertyAll<Color>(
+          Color.fromARGB(255, 246, 193, 119),
+        ),
+        checkColor: MaterialStatePropertyAll<Color>(
+          Color.fromARGB(255, 82, 79, 103),
+        ),
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-          )),
+          shape: const MaterialStatePropertyAll(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
+          ),
           backgroundColor: MaterialStatePropertyAll(Colors.blue[500]),
           foregroundColor: const MaterialStatePropertyAll(Colors.white),
-          textStyle: const MaterialStatePropertyAll(TextStyle(
-            color: Colors.black87,
-            fontFamily: "Poppins",
-            fontSize: 12,
-            fontWeight: FontWeight.w200,
-          )),
-        )
+          textStyle: const MaterialStatePropertyAll(
+            TextStyle(
+              color: Colors.black87,
+              fontFamily: "Poppins",
+              fontSize: 12,
+              fontWeight: FontWeight.w200,
+            ),
+          ),
+        ),
       ),
       snackBarTheme: const SnackBarThemeData(
         contentTextStyle: TextStyle(
@@ -173,16 +194,17 @@ class ThemeSelector {
           fontSize: 12,
           fontWeight: FontWeight.w300,
         ),
-        actionTextColor: Colors.blueAccent,
+        actionTextColor: Colors.black,
         behavior: SnackBarBehavior.fixed,
         elevation: 10,
         backgroundColor: Color.fromARGB(255, 246, 193, 119),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(10)
-          )
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(10),
+          ),
         ),
-      )
+      ),
     );
   }
 }

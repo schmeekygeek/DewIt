@@ -8,10 +8,15 @@ import 'providers/theme_model.dart';
 import 'services/shared_prefs_service.dart';
 
 main() {
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(create: (_) => ThemeModel()),
-    ChangeNotifierProvider(create: (_) => TaskModel()),
-  ], child: const MyApp()));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeModel()),
+        ChangeNotifierProvider(create: (_) => TaskModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 const ThemeSelector selector = ThemeSelector();
