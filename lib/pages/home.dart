@@ -115,9 +115,24 @@ class _HomeState extends State<Home> {
           ),
           SliverToBoxAdapter(
             child: context.watch<TaskModel>().tasks.isEmpty
-                ? const Text(
-                    "You haven't added any tasks yet.",
-                    textAlign: TextAlign.center,
+                ? Column(
+                    children: [
+                      const SizedBox(
+                        height: 100,
+                      ),
+                      Image.asset(
+                        'assets/fuzzy.png',
+                        height: 140,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Text(
+                        "You haven't added any tasks yet.\nClick on the button below to add one",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ],
                   )
                 : AnimatedOpacity(
                     opacity: 1,
