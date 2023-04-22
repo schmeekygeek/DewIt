@@ -55,8 +55,8 @@ class _AboutState extends State<About> {
                   height: 30,
                 ),
                 Container(
-                  height: 140,
-                  width: 140,
+                  height: 130,
+                  width: 150,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
@@ -101,13 +101,18 @@ class _AboutState extends State<About> {
                       fontSize: 30,
                       fontWeight: FontWeight.w500,
                     ),
+                    textAlign: TextAlign.justify,
                   ),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                    "Abdul Samad is a self-taught, full-stack developer, based in Mumbai, India\nCheck out their work here:",),
+                const Center(
+                  child: Text(
+                    "Abdul Samad is a self-taught, full-stack developer, based in Mumbai, India\nCheck out his work here:",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -116,10 +121,10 @@ class _AboutState extends State<About> {
                   children: [
                     const LinkItem(
                       foregroundColor: Colors.black,
-                      backgroundColor: Colors.lightBlueAccent,
-                      url: "https://twitter.com/schmeekydev",
-                      name: "Twitter",
-                      icon: FontAwesomeIcons.twitter,
+                      backgroundColor: Colors.limeAccent,
+                      url: "https://schmeeky.pages.dev",
+                      name: "Read my Blog",
+                      icon: FontAwesomeIcons.book,
                     ),
                     const LinkItem(
                       foregroundColor: Colors.white,
