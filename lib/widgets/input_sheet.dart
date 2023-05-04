@@ -26,10 +26,10 @@ Future<void> bottomSheetBuilder(BuildContext context) {
       return SizedBox(
         child: Padding(
           padding: EdgeInsets.only(
-            bottom: MediaQuery.of(context).viewInsets.bottom + 5,
-            left: 12,
+            bottom: MediaQuery.of(context).viewInsets.bottom + 8,
+            left: 14,
             top: 12,
-            right: 12,
+            right: 14,
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -39,12 +39,24 @@ Future<void> bottomSheetBuilder(BuildContext context) {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "New Task",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "New Task",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 23,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      FontAwesomeIcons.listCheck,
+                      size: 20,
+                    ),
+                  ],
                 ),
                 const SizedBox(
                   height: 5,
