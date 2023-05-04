@@ -118,7 +118,7 @@ class _HomeState extends State<Home> {
                 ? Column(
                     children: [
                       const SizedBox(
-                        height: 100,
+                        height: 90,
                       ),
                       Image.asset(
                         'assets/fuzzy.png',
@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                         height: 20,
                       ),
                       const Text(
-                        "You haven't added any tasks yet.\nClick on the button below to add one",
+                        "You haven't added any tasks yet.",
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 15),
                       ),
@@ -195,12 +195,18 @@ class _HomeState extends State<Home> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        label: const Text("New Task"),
+        label: const Text(
+          "New Task",
+          style: TextStyle(
+            fontFamily: "Poppins",
+            fontSize: 15,
+          ),
+        ),
         isExtended: true,
         tooltip: "New Task",
         icon: const Icon(
           FontAwesomeIcons.plus,
-          size: 24,
+          size: 20,
         ),
         onPressed: () async {
           bottomSheetBuilder(context);

@@ -30,9 +30,10 @@ class LinkItem extends StatelessWidget {
         ),
       ),
       onPressed: () async {
-        if (await canLaunchUrlString(url)) {
-          await launchUrlString(url, mode: LaunchMode.externalApplication);
-        }
+        await launchUrlString(
+          url,
+          mode: LaunchMode.externalApplication,
+        );
       },
     );
   }

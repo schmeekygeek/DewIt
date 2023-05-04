@@ -9,6 +9,12 @@ void showSnackBar(BuildContext context, String text, bool isDone, int index){
   SnackBar snackBar = SnackBar(
     duration: const Duration(seconds: 2),
     content: const Text("Task Deleted!"),
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(12),
+        topRight: Radius.circular(12)
+      )
+    ),
     action: SnackBarAction(
       label: "Undo",
       onPressed: () {
@@ -25,6 +31,12 @@ void showSuccessfullySortedSnackbar(BuildContext context){
   SnackBar snackBar = const SnackBar(
     duration: Duration(seconds: 2),
     content: Text("Successfully sorted tasks!"),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(12),
+        topRight: Radius.circular(12)
+      )
+    ),
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
@@ -33,6 +45,12 @@ void showNoTasksToSortSnackbar(BuildContext context){
   SnackBar snackBar = const SnackBar(
     duration: Duration(seconds: 2),
     content: Text("There are no tasks to sort."),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(12),
+        topRight: Radius.circular(12)
+      )
+    ),
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
